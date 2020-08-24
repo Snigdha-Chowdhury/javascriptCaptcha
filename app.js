@@ -1,20 +1,20 @@
-let showCapcha = document.getElementById('showCapcha');
-let inputCapcha = document.getElementById('inputCapcha');
-let verifyCapcha = document.getElementById('verifyCapcha');
+let showCaptcha = document.getElementById('showCaptcha');
+let inputCaptcha = document.getElementById('inputCaptcha');
+let verifyCaptcha = document.getElementById('verifyCaptcha');
 
 let input = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-let Capcha = input[Math.floor(Math.random()*input.length)];
+let Captcha = input[Math.floor(Math.random()*input.length)];
 for(i=0; i<8;i++){
-    Capcha = Capcha + input[Math.floor(Math.random()*input.length)];
+    Captcha = Captcha + input[Math.floor(Math.random()*input.length)];
 }
-showCapcha.innerHTML = Capcha;
-verifyCapcha.addEventListener('click', () => {
+showCaptcha.innerHTML = Captcha;
+verifyCaptcha.addEventListener('click', () => {
 
-    let inputCapchaValue = inputCapcha.value;
-    if(Capcha === inputCapchaValue){
+    let inputCaptchaValue = inputCaptcha.value;
+    if(Captcha === inputCaptchaValue){
         alert("Successful Submition");
     }else{
-        alert("Wrong Capcha Value");
+        alert("Wrong Captcha Value");
         
     }
 
